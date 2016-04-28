@@ -1,5 +1,3 @@
-# AlterableCalendarWithDB
-
 Modified calendar from Github's Zabuto to the URL : https://github.com/zabuto/calendar
 ---------------------------------------------------------------------------------------------------
 To include the calendar to a website : 

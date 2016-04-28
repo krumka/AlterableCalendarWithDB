@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Test Zabuto Calendar</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <link rel="stylesheet" type="text/css" href="js/zabuto_calendar.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="js/zabuto_calendar.js"></script>
+        <script src="js/onclickActions.js"></script>
+    </head>
+    <body>
+        <select name="type" id="type" onchange="chR(this)">
+            <option name="not" id="not" value=0>-- Choisissez votre action --</option>
+            <option name="reserv" id="reserv" value="reserv">Réserver</option>
+            <option name="haute_saison" id="haute_saison" value="haute_saison">Haut Saison</option>
+            <option name="basse_saison" id="basse_saison" value="basse_saison">Basse Saison</option>
+            <option name="del" id="del" value="del">Supprimer</option>
+        </select>
+        <div id="my-calendar"></div>
+        <span id="error" style="color: red;"></span>
+        <script type="application/javascript">
+            $(document).ready(function () {
+                $("#my-calendar").zabuto_calendar({
+                    language: "fr",
+                    show_previous: false,
+                    today: true,
+                    ajax: {
+                        url: "inc/showData.php",
+                        modal: true
+                    },
+                    legend: [
+                        {type: "text", label: "Haute Saison", classname: "hauteSaison", badge:"Day"},
+                        {type: "text", label: "Basse Saison", classname: "basseSaison", badge:"Day"},
+                        {type: "text", label: "Réservé", classname: "res", badge:"Day"},
+                        {type: "text", label: "Aujourd'hui", classname: "today", badge:"Day"}
+                    ]
+                });
+            });
+        </script>
+    </body>
+</html>
+
+
