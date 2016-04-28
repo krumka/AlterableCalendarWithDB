@@ -88,7 +88,7 @@ div.zabuto_calendar .table tr td.event-clickable {
 
 /* badge */
 div.zabuto_calendar .badge-today,
-div.zabuto_calendar div.legend span.badge-today {
+div.zabuto_calendar div.legend span.badge-today, .tod {
     background-color: #357ebd;
     color: #ffffff;
     text-shadow: none;

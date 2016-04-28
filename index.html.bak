@@ -17,7 +17,7 @@
         <select name="type" id="type" onchange="chR(this)">
             <option name="not" id="not" value=0>-- Choisissez votre action --</option>
             <option name="reserv" id="reserv" value="reserv">Réserver</option>
-            <option name="haute_saison" id="haute_saison" value="haute_saison">Haute Saison</option>
+            <option name="haute_saison" id="haute_saison" value="haute_saison">Haut Saison</option>
             <option name="basse_saison" id="basse_saison" value="basse_saison">Basse Saison</option>
             <option name="del" id="del" value="del">Supprimer</option>
         </select>
@@ -37,7 +37,7 @@
                         {type: "text", label: "Haute Saison", classname: "hauteSaison", badge:"Day"},
                         {type: "text", label: "Basse Saison", classname: "basseSaison", badge:"Day"},
                         {type: "text", label: "Réservé", classname: "res", badge:"Day"},
-                        {type: "text", label: "Aujourd'hui", classname: "tod", badge:"Day"}
+                        {type: "text", label: "Aujourd'hui", classname: "today", badge:"Day"}
                     ]
                 });
             });
