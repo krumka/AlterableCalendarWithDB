@@ -190,6 +190,9 @@ div.zabuto_calendar td div{
 .basse_saison .badge, .basseSaison{
     background-color: #123a0c;
 }
+.moyenne_saison .badge, .moyenneSaison{
+    background-color: #a6ae13;
+}
 .badge{
     font-size: medium;
 }
