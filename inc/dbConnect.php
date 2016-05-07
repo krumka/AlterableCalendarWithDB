@@ -9,3 +9,5 @@ try{
 }catch (Exception $e){
     die('Erreur : ' . $e->getMessage());
 }
+$sql = "DELETE FROM calendar WHERE calendarDate < NOW();";
+$calendar->exec($sql);
